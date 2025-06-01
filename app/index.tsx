@@ -17,7 +17,7 @@ export default function Index() {
             <Button theme="primary" label="SIM" onPress={() => router.navigate("/(professional)/login")} />
 
             <View style={styles.buttonContainer}>
-                <Button theme="secondary" label="Não, sou um paciente" onPress={() => router.navigate("/(tabs)/home")} />
+                <Button theme="secondary" label="Não, sou um paciente" onPress={() => router.navigate("/(common_user)/login")} />
             </View>
         </View>
     );

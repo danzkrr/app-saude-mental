@@ -3,6 +3,7 @@ import { Link, useRouter } from "expo-router";
 
 import Input from "@/components/Inputs";
 import Button from "@/components/Buttons";
+import Modal from "@/components/Modal";
 import ImageViewer from "@/components/imageViwer";
 
 const PlaceholderImage = require("@/assets/images/leelel_logo.png");
@@ -22,9 +23,11 @@ export default function Login() {
 
                 <Button theme="primary" label="Entrar" onPress={() => router.back()} />
 
-                <Link href="/help" style={styles.link}>
-                    Não possuo código
-                </Link>
+                <Modal title="Ajuda" content="Se você ainda não possui um código, será necessário entrar em contato com a equipe responsável pelo seu cadastro. Normalmente, o código é fornecido diretamente pelos desenvolvedores ou administradores do sistema.
+
+Entre em contato com seu supervisor, gerente ou com o time de desenvolvimento para solicitar seu código de acesso. Eles irão validar suas informações e fornecer os dados necessários para ativação.
+
+Este processo ajuda a garantir que apenas profissionais autorizados tenham acesso ao sistema." />
             </View>
         </View>
     );
@@ -48,12 +51,10 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginBottom: 20
     },
-    link: {
-        color: "rgb(0, 0, 0)",
-        fontSize: 20,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        marginTop: 20,
-        textDecorationLine: 'underline'
+    buttonContainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        marginTop: 5
     }
 });
