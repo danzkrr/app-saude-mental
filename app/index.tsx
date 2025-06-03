@@ -1,17 +1,14 @@
 import { useRouter } from "expo-router";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 
 import Button from "@/components/Buttons";
-import ImageViewer from "@/components/imageViwer";
-
-const PlaceholderImage = require("../assets/images/leelel_logo.png");
 
 export default function Index() {
     const router = useRouter();
 
     return (
         <View style={styles.container}>
-            <ImageViewer imgSource={PlaceholderImage} />
+            <Image source={require("@/assets/images/leelel_logo.png")} style={styles.image}/>
             <Text style={styles.text}>Você é um profissional da saúde mental?</Text>
             
             <Button theme="primary" label="SIM" onPress={() => router.navigate("/(professional)/login")} />
@@ -43,5 +40,9 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         marginBottom: 20
+    },
+    image: {
+        width: 280,
+        height: 280
     }
 });

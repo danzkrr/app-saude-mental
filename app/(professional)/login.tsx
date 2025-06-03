@@ -1,19 +1,17 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import { Link, useRouter } from "expo-router";
 
 import Input from "@/components/Inputs";
 import Button from "@/components/Buttons";
 import Modal from "@/components/Modal";
-import ImageViewer from "@/components/imageViwer";
 
-const PlaceholderImage = require("@/assets/images/leelel_logo.png");
 
 export default function Login() {
     const router = useRouter();
 
     return (
         <View style={styles.container}>
-            <ImageViewer imgSource={PlaceholderImage} />
+            <Image source={require("@/assets/images/leelel_logo.png")} style={styles.image}/>
 
             <View style={styles.inputContainer}>
                 <Text style={styles.text}>Login</Text>
@@ -21,7 +19,7 @@ export default function Login() {
                 <Input placeholder="Digite seu código..." />
                 <Input placeholder="Digite sua senha..." />
 
-                <Button theme="primary" label="Entrar" onPress={() => router.back()} />
+                <Button theme="primary" label="Entrar" onPress={() => router.navigate("/(tabs)/home")} />
 
                 <Modal title="Ajuda" content="Se você ainda não possui um código, será necessário entrar em contato com a equipe responsável pelo seu cadastro. Normalmente, o código é fornecido diretamente pelos desenvolvedores ou administradores do sistema.
 
@@ -56,5 +54,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         flexDirection: 'column',
         marginTop: 5
+    },
+    image: {
+        width: 280,
+        height: 280
     }
 });

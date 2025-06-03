@@ -1,19 +1,21 @@
-import { Text, View, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
-import Button from "@/components/Buttons";
-import ImageViewer from "@/components/imageViwer";
+import Header from "@/components/Header";
+import BodyIcons from "@/components/BodyIcons";
 
-const PlaceholderImage = require("../../assets/images/Samurai Girl.jpg");
-
-export default function Index() {
+export default function Home() {
   return (
     <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <ImageViewer imgSource={PlaceholderImage} />
+      <View style={styles.headerContainer}>
+        <Header />
       </View>
-      <View style={styles.footerContainer}>
-        <Button theme="primary" label="Escolha uma imagem"/>
-        <Button label="Use essa imagem"/>
+
+      <View style={styles.bodyContainer}>
+        <View style={styles.bodyTitleContainer}>
+          <Text style={styles.menuText}>Menu</Text>
+          <Text style={styles.showAllText}>Mostrar Tudo</Text>
+        </View>
+        <BodyIcons />
       </View>
     </View>
   );
@@ -22,14 +24,32 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#25292e",
-    alignItems: "center",
+    flexDirection: "column",
+    backgroundColor: "#rgb(249, 249, 250)",
   },
-  imageContainer: {
+  headerContainer: {
     flex: 1,
   },
-  footerContainer: {
-    flex: 1 / 3,
+  bodyContainer: {
+    flex: 3,
+    marginTop: 20,
+  },
+  bodyTitleContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
     alignItems: "center",
-  }
+  },
+  menuText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginLeft: 15,
+    marginBottom: 20,
+  },
+  showAllText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginRight: 15,
+    marginBottom: 20,
+  },
 });
+

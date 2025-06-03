@@ -1,0 +1,65 @@
+import { View, Text, StyleSheet } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
+export default function BodyIcons() {
+    return (
+        <View style={styles.container}>
+            <View style={styles.row}>
+                <View style={styles.boxIcon}>
+                    <MaterialCommunityIcons name="heart-pulse" size={40} color="white" />
+                    <Text style={styles.text}>Saúde Física</Text>
+                </View>
+                <View style={styles.boxIcon}>
+                    <MaterialCommunityIcons name="brain" size={40} color="white" />
+                    <Text style={styles.text}>Saúde Mental</Text>
+                </View>
+                <View style={styles.boxIcon}>
+                    <MaterialCommunityIcons name="meditation" size={40} color="white" />
+                    <Text style={styles.text}>Meditar</Text>
+                </View>
+            </View>
+            <View style={styles.row}>
+                <View style={styles.boxIcon}>
+                    <MaterialCommunityIcons name="cloud" size={40} color="white" />
+                    <Text style={styles.text}>Ansiedade</Text>
+                </View>
+                <View style={styles.boxIcon}>
+                    <MaterialCommunityIcons name="puzzle" size={40} color="white" />
+                    <Text style={styles.text}>Depressão</Text>
+                </View>
+                <View style={styles.boxIcon}>
+                    <MaterialCommunityIcons name="star-face" size={40} color="white" />
+                    <Text style={styles.text}>Alegria</Text>
+                </View>
+            </View>
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    container: {
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    row: {
+        flexDirection: "row",
+        justifyContent: "space-around",
+        width: "100%",
+        marginBottom: 20,
+    },
+    boxIcon: {
+        width: 110,
+        height: 110,
+        backgroundColor: "rgb(118, 181, 214)",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: 5,
+    },
+    text: {
+        color: "rgb(249, 249, 250)",
+        fontSize: 20,
+        fontWeight: "bold",
+        textAlign: "center",
+    },
+});
+
