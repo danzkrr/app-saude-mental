@@ -1,11 +1,13 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import { useRouter } from "expo-router";
+import {useState} from "react"
 
 import Input from "@/components/Inputs";
 import Button from "@/components/Buttons";
 
 export default function Login() {
     const router = useRouter();
+    const [username, setUsername] = useState('');
 
     return (
         <View style={styles.container}>
@@ -14,9 +16,9 @@ export default function Login() {
             <View style={styles.inputContainer}>
                 <Text style={styles.text}>Cadastrar-se</Text>
 
-                <Input placeholder="Digite seu nome..." />
-                <Input placeholder="Digite seu email..." />
-                <Input placeholder="Digite sua senha..." />
+                <Input placeholder="Digite seu nome..." value = {username} onChangeText={setUsername}/>
+                <Input placeholder="Digite seu email..." value = {''}/>
+                <Input placeholder="Digite sua senha..."value ={''} />
 
                 <Button theme="primary" label="Entrar" onPress={() => router.navigate("/(tabs)/home")} />
             </View>

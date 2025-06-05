@@ -62,7 +62,7 @@ export default function Button({ label, theme, onPress }: Props) {
                         style={[
                             styles.buttonLabel,
                             {
-                                color: "rgb(0, 0, 0)",
+                                color: "rgb(3, 4, 12)",
                                 fontSize: 20,
                                 textDecorationLine: "underline",
                             },

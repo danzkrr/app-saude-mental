@@ -1,15 +1,17 @@
 import { StyleSheet, View, TextInput } from "react-native";
 
 type Props = {
-    placeholder: string
+    placeholder: string,
+    value: string,
 }
 
-export default function Input({ placeholder }: Props) {
+export default function Input({ placeholder, value }: Props) {
     return (
         <View style={styles.container}>
             <TextInput
                 style={styles.input}
-                placeholder={placeholder}
+                placeholder={placeholder} 
+                value={value}
                 placeholderTextColor="#888"
             />
         </View>
