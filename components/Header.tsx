@@ -2,21 +2,27 @@ import { View, Text, StyleSheet, Image } from "react-native";
 
 import SearchBar from "@/components/SearchBar";
 
+import { useUser } from "./UserContext";
+
 export default function Header() {
+    const { userName } = useUser();
+    console.log("Nome no header:", userName);
+
     return (
         <View style={styles.header}>
             <View style={styles.profile}>
-                <Image source={require("@/assets/images/Samurai Girl.jpg")} style={styles.image}/>
+                <Image source={require("@/assets/images/Samurai Girl.jpg")} style={styles.image} />
                 <View style={styles.profileInfo}>
                     <Text style={{ fontWeight: "bold", fontSize: 20, color: "rgb(249, 249, 250)" }}>Bem vindo!</Text>
-                    <Text style={{ fontWeight: "bold", fontSize: 16, color: "rgb(249, 249, 250)" }}>[Seu nome]</Text>
+                    <Text style={{ fontWeight: "bold", fontSize: 16, color: "rgb(249, 249, 250)" }}>
+                        {userName}
+                    </Text>
                 </View>
             </View>
-            
+
             <View style={styles.searchBar}>
-                <SearchBar onSearch={() => {}} />
+                <SearchBar onSearch={() => { }} />
             </View>
-            
         </View>
     );
 }

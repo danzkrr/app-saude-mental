@@ -9,7 +9,7 @@ export default function Login() {
 
     return (
         <View style={styles.container}>
-            <Image source={require("@/assets/images/leelel_logo.png")} style={styles.image}/>
+            <Image source={require("@/assets/images/leelel_logo.png")} style={styles.image} />
 
             <View style={styles.inputContainer}>
                 <Text style={styles.text}>Login</Text>
