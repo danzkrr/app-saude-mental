@@ -19,9 +19,7 @@ export default function Login() {
 
                 <Button theme="primary" label="Entrar" onPress={() => router.navigate("/(tabs)/home")} />
 
-                <Link href="/register" style={styles.link}>
-                    Não possuo login
-                </Link>
+                <Button theme="tertiary" label="Cadastrar-se" onPress={() => router.navigate("/register")} />
             </View>
         </View>
     );

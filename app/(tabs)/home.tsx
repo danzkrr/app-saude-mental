@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        <Header />
+        <Header theme="primary" />
       </View>
 
       <View style={styles.bodyContainer}>

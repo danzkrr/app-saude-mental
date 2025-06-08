@@ -1,8 +1,8 @@
 import { StyleSheet, View, TextInput, TextInputProps } from "react-native";
 
 type Props = {
-    placeholder: string
-} & TextInputProps
+    placeholder: string;
+} & TextInputProps;
 
 export default function Input({ placeholder, ...rest }: Props) {
     return (
@@ -19,18 +19,24 @@ export default function Input({ placeholder, ...rest }: Props) {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 5,
         alignItems: 'center',
+        marginBottom: 16,
     },
     input: {
-        height: 48,
-        width: 300,
-        backgroundColor: "#f5f5f5",
+        height: 50,
+        width: '90%',
+        backgroundColor: "#fff",
         borderRadius: 12,
         paddingHorizontal: 16,
         fontSize: 16,
-        borderWidth: 1.5,
-        borderColor: "#ccc",
+        fontWeight: "bold",
+        borderWidth: 1,
+        borderColor: "#ddd",
         color: "#333",
+        shadowColor: "#000",
+        shadowOpacity: 0.05,
+        shadowOffset: { width: 0, height: 2 },
+        shadowRadius: 4,
+        elevation: 2,
     },
 });
