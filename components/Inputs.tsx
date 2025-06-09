@@ -1,4 +1,4 @@
-import { StyleSheet, View, TextInput, TextInputProps } from "react-native";
+import { StyleSheet, View, TextInput, TextInputProps, KeyboardAvoidingView } from "react-native";
 
 type Props = {
     placeholder: string;

@@ -13,7 +13,7 @@ export default function Login() {
         <View style={styles.container}>
             <Image source={require("@/assets/images/leelel_logo.png")} style={styles.image}/>
 
-            <View style={styles.inputContainer}>
+            <View>
                 <Text style={styles.text}>Login</Text>
 
                 <Input placeholder="Digite seu código..." />
@@ -37,10 +37,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgb(249, 249, 250)',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 100,
-    },
-    inputContainer: {
-        flex: 1
     },
     text: {
         color: "rgb(0, 0, 0)",

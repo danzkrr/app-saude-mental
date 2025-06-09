@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    backgroundColor: "#rgb(249, 249, 250)",
+    backgroundColor: "rgb(249, 249, 250)",
   },
   headerContainer: {
     flex: 1,
