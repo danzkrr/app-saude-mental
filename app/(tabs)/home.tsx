@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        <Header />
+        <Header theme="primary" />
       </View>
 
       <View style={styles.bodyContainer}>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    backgroundColor: "#rgb(249, 249, 250)",
+    backgroundColor: "rgb(249, 249, 250)",
   },
   headerContainer: {
     flex: 1,

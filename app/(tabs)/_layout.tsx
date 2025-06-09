@@ -1,12 +1,12 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Tabs } from 'expo-router';
 
-
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: 'rgb(249, 249, 250)',
+        tabBarInactiveTintColor: 'rgb(224, 224, 224)',
         headerStyle: {
           backgroundColor: '#rgb(118, 181, 214)',
         },
@@ -53,7 +53,7 @@ export default function TabLayout() {
         }} 
       />
       <Tabs.Screen 
-        name="profile" 
+        name="profile/profile" 
         options={{ 
           headerShown: false,
           tabBarLabel: 'Perfil',
