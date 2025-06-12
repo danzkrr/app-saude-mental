@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 import Header from "@/components/Header";
 import BodyIcons from "@/components/BodyIcons";

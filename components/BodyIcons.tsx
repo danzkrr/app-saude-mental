@@ -1,36 +1,48 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function BodyIcons() {
     return (
         <View style={styles.container}>
             <View style={styles.row}>
-                <View style={styles.boxIcon}>
-                    <MaterialCommunityIcons name="heart-pulse" size={40} color="white" />
-                    <Text style={styles.text}>Saúde Física</Text>
-                </View>
-                <View style={styles.boxIcon}>
-                    <MaterialCommunityIcons name="brain" size={40} color="white" />
-                    <Text style={styles.text}>Saúde Mental</Text>
-                </View>
-                <View style={styles.boxIcon}>
-                    <MaterialCommunityIcons name="meditation" size={40} color="white" />
-                    <Text style={styles.text}>Meditar</Text>
-                </View>
+                <TouchableOpacity activeOpacity={0.7}>
+                    <View style={styles.boxIcon}>
+                        <MaterialCommunityIcons name="heart-pulse" size={40} color="white" />
+                        <Text style={styles.text}>Saúde Física</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.7}>
+                    <View style={styles.boxIcon}>
+                        <MaterialCommunityIcons name="brain" size={40} color="white" />
+                        <Text style={styles.text}>Saúde Mental</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.7}>
+                    <View style={styles.boxIcon}>
+                        <MaterialCommunityIcons name="meditation" size={40} color="white" />
+                        <Text style={styles.text}>Meditar</Text>
+                    </View>
+                </TouchableOpacity>
             </View>
             <View style={styles.row}>
-                <View style={styles.boxIcon}>
-                    <MaterialCommunityIcons name="cloud" size={40} color="white" />
-                    <Text style={styles.text}>Ansiedade</Text>
-                </View>
-                <View style={styles.boxIcon}>
-                    <MaterialCommunityIcons name="puzzle" size={40} color="white" />
-                    <Text style={styles.text}>Depressão</Text>
-                </View>
-                <View style={styles.boxIcon}>
-                    <MaterialCommunityIcons name="star-face" size={40} color="white" />
-                    <Text style={styles.text}>Alegria</Text>
-                </View>
+                <TouchableOpacity activeOpacity={0.7}>
+                    <View style={styles.boxIcon}>
+                        <MaterialCommunityIcons name="cloud" size={40} color="white" />
+                        <Text style={styles.text}>Ansiedade</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.7}>
+                    <View style={styles.boxIcon}>
+                        <MaterialCommunityIcons name="puzzle" size={40} color="white" />
+                        <Text style={styles.text}>Depressão</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.7}>
+                    <View style={styles.boxIcon}>
+                        <MaterialCommunityIcons name="star-face" size={40} color="white" />
+                        <Text style={styles.text}>Alegria</Text>
+                    </View>
+                </TouchableOpacity>
             </View>
         </View>
     );

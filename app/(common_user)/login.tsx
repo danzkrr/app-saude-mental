@@ -1,20 +1,24 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableWithoutFeedback, Keyboard } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableWithoutFeedback, Keyboard, Dimensions } from "react-native";
 import { useRouter } from "expo-router";
 import { useAnimatedKeyboard, useAnimatedStyle } from "react-native-reanimated";
-
 import Animated from "react-native-reanimated";
 
 import Input from "@/components/Inputs";
 import Button from "@/components/Buttons";
 
+const { height: screenHeight } = Dimensions.get("window");
+
 export default function Login() {
     const router = useRouter();
     const keyboard = useAnimatedKeyboard();
 
-    const animatedStyle = useAnimatedStyle(() => ({
-        transform: [{ translateY: -keyboard.height.value }],
-    }));
+    const animatedStyle = useAnimatedStyle(() => {
+        const keyboardOffset = Math.max(keyboard.height.value - screenHeight * 0.15, 0);
+        return {
+            transform: [{ translateY: -keyboardOffset }],
+        };
+    });
 
     return (
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
